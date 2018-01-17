@@ -1,0 +1,6 @@
+{{quantity * product.price | currency}}
+<div class="quantity-selector">
+  <div class="minus" (click)="handleMinusClick()">-</div>
+  <div class="value">{{quantityInput}}</div>
+  <div class="plus" (click)="handlePlusClick()">+</div>
+</div>

@@ -1,0 +1,65 @@
+
+<app-cart></app-cart>
+<div class="container">
+<div *ngIf='product!=null '>
+<div class="col-md-2">
+
+  <ul class="product-thumbs">
+    <li *ngFor="let img of product.images; let i =index;">
+
+      <img src="../../assets/img/{{img}}" (click)="switchedDisplayImg(i)"/>
+    </li>
+  </ul>
+
+</div>
+
+  <div class="col-md-6">
+  <img src="../../assets/img/{{largeDisplayImg}}" class="product" />
+
+  </div>
+
+<div class="col-md-4">
+  <h1>{{product.name}}</h1>
+
+  <p>{{product.feature}}</p>
+
+  <h2>Price:{{product.price|currency}}</h2>
+
+  <div class="dropdown">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> choose your size  <span class="caret"></span></button>
+    <div class="dropdown-menu">
+      <li *ngFor="let sz of product.size; let i =index;">
+       {{product.size}}
+      </li>
+    </div>
+  </div>
+<br/>
+
+  <button  *ngIf="product.quantity !==0" class="btn btn-primary" (click)="addToCart(product)" >Add to Cart</button>
+  <button *ngIf="product.quantity ==0" class="btn btn-primary" disabled="disabled" >Sold Out</button>
+<br/><br/>
+<ul class="specs">
+  <li>
+<span>Editor's Note</span>
+    <dl>
+     {{product.editornote}}
+    </dl>
+  </li>
+  <li>
+    <span>Product Details</span>
+    <dl>{{product.productdetails}}</dl>
+  </li>
+  <li>
+    <span>Size & Fit</span>
+    <dl>{{product.sizefit}}</dl>
+  </li>
+  <li>
+    <span>Shipping & Return</span>
+    <dl>{{product.shippingreturn}}</dl>
+  </li>
+</ul>
+
+</div>
+
+</div>
+</div>

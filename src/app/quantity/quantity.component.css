@@ -1,0 +1,26 @@
+.quantity-selector {
+  display: flex;
+  padding: 6px;
+  border: 1px solid #dce0e0;
+  border-radius: 3px;
+}
+
+
+.quantity-selector div {
+  width: 100%;
+  text-align: center;
+
+}
+.quantity-selector div:not(:first-child) {
+  border-left: 1px solid #dce0e0;
+}
+
+.quantity-selector .minus,
+.quantity-selector .plus {
+  cursor: pointer;
+}
+
+.quantity-selector .plus {
+  position: relative;
+  top: 1px;
+}

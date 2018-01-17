@@ -1,0 +1,47 @@
+.product {
+  background-color: white;
+
+  height: 550px;
+  width: 500px;
+  margin-left: 25px;
+}
+
+.product-thumbs {
+  list-style: none;
+  margin-right: 25px;
+}
+
+.product-thumbs img {
+  height: 150px;
+  width: 150px;
+}
+
+.product-thumbs li {
+  background-color: white;
+  display: inline-block;
+  margin: 1em;
+  cursor: pointer;
+}
+
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+
+  width: 300px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
